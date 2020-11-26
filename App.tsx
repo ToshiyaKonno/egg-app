@@ -8,20 +8,17 @@ import monster1 from './assets/attak1.png'
 import monster2 from './assets/spartcamp.png'
 import monster3 from './assets/ritch02.png'
 
-
+// エッグイメージ
 let imgArry = [logo1,logo2,logo3];
 let imgNum = imgArry.length
 let msg = ""
 let resultImasge = imgArry[imgNum] || rand
 
-
-
-
+// 生まれてくるモンスターの配列
 let monster = [monster1,monster2,monster3];
 var rand = monster[ Math.floor( Math.random() * monster.length ) ] ;
 
-
-
+// エッグ画像表示の配列
 export default function App() {
   var [count, setCount] = useState(100);
   resultImasge = imgArry[0];
@@ -33,6 +30,7 @@ export default function App() {
     resultImasge = rand;
   } 
 
+  // コメント
   if (count === 75) {
     msg = "残り75";
   }else if (count === 50) {
@@ -75,13 +73,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-
-
-
-
-// if (count <= 50 && count <= 0 ) {
-//   imgNum === 1;
-// } else if (count === 0){
-//   imgNum === 2;  
-// }
